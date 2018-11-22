@@ -11,3 +11,12 @@ $schedule = \Admin\Models\Schedule::find(request()->route()->parameters()['child
 <meta name="twitter:title" content="{{ preg_replace("/\r|\n/", " ", trim($schedule->name)) }}">
 <meta name="twitter:image" content="{{ preg_replace("/\r|\n/", " ", trim(request()->getSchemeAndHttpHost().$schedule->image)) }}">
 <meta name="twitter:description" content="{{ str_limit(trim(strip_tags($schedule->description)), 150) }}">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116316904-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-116316904-1');
+</script>
